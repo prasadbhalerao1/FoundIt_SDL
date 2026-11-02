@@ -1,0 +1,65 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - link "FI FoundIt" [ref=f5e4] [cursor=pointer]:
+        - /url: /FoundIt/home
+        - generic [ref=f5e5]: FI
+        - text: FoundIt
+      - navigation [ref=f5e6]:
+        - link "Browse" [ref=f5e7] [cursor=pointer]:
+          - /url: /FoundIt/browse
+        - link "Report an item" [ref=f5e8] [cursor=pointer]:
+          - /url: /FoundIt/report?type=LOST
+        - link "Dashboard" [ref=f5e9] [cursor=pointer]:
+          - /url: /FoundIt/dashboard
+        - link "Claims to review" [ref=f5e10] [cursor=pointer]:
+          - /url: /FoundIt/claims/review
+        - link "My claims" [ref=f5e11] [cursor=pointer]:
+          - /url: /FoundIt/claims/mine
+      - generic [ref=f5e12]:
+        - link "Alerts 2" [ref=f5e13] [cursor=pointer]:
+          - /url: /FoundIt/notifications
+          - text: Alerts
+          - generic [ref=f5e14]: "2"
+        - generic [ref=f5e15]: Aarti Deshmukh
+        - button "Sign out" [ref=f5e17] [cursor=pointer]
+  - main [ref=f5e18]:
+    - generic [ref=f5e19]:
+      - generic [ref=f5e20]:
+        - generic [ref=f5e21]: Found item
+        - generic [ref=f5e22]: open
+        - generic [ref=f5e23]: Wallets & Purses
+      - generic [ref=f5e24]:
+        - generic [ref=f5e25]:
+          - heading "Leather wallet found near canteen" [level=1] [ref=f5e26]
+          - paragraph [ref=f5e27]: Reported by Rohan Kulkarni · 6 days ago
+        - link "This is mine — submit a claim" [ref=f5e29] [cursor=pointer]:
+          - /url: /FoundIt/claims/new?item=2
+    - generic [ref=f5e30]:
+      - generic [ref=f5e31]:
+        - img "Photograph of Leather wallet found near canteen" [ref=f5e33]
+        - generic [ref=f5e35]:
+          - generic [ref=f5e36]:
+            - term [ref=f5e37]: Found at
+            - definition [ref=f5e38]: Main Canteen
+          - generic [ref=f5e39]:
+            - term [ref=f5e40]: Date found
+            - definition [ref=f5e41]: 13 Oct 2026
+          - generic [ref=f5e42]:
+            - term [ref=f5e43]: Category
+            - definition [ref=f5e44]: Wallets & Purses
+          - generic [ref=f5e45]:
+            - term [ref=f5e46]: Colour
+            - definition [ref=f5e47]: Brown
+          - generic [ref=f5e48]:
+            - term [ref=f5e49]: Reported
+            - definition [ref=f5e50]: 16 Oct 2026, 15:11
+      - generic [ref=f5e52]:
+        - heading "Description" [level=2] [ref=f5e53]
+        - paragraph [ref=f5e54]: Found a brown bi-fold wallet on the bench outside the main canteen. Cards are inside. Deposited with me, will hand over to the right owner.
+        - generic [ref=f5e55]:
+          - generic [ref=f5e56]: Held back on purpose
+          - text: The finder recorded identifying details that are not shown here. A claim is verified by describing them, which is what stops somebody claiming an item from the photograph alone.
+  - contentinfo [ref=f5e57]:
+    - generic [ref=f5e58]: FoundIt · campus lost and found · Jakarta EE, Servlets, JSP, JDBC, MySQL
+    - generic [ref=f5e59]: A match is a hint, never proof of ownership.

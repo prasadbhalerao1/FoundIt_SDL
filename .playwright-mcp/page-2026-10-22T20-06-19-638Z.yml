@@ -1,0 +1,163 @@
+- generic [active] [ref=f13e1]:
+  - banner [ref=f13e2]:
+    - generic [ref=f13e3]:
+      - link "FI FoundIt" [ref=f13e4] [cursor=pointer]:
+        - /url: /FoundIt/home
+        - generic [ref=f13e5]: FI
+        - text: FoundIt
+      - navigation [ref=f13e6]:
+        - link "Browse" [ref=f13e7] [cursor=pointer]:
+          - /url: /FoundIt/browse
+        - link "Report an item" [ref=f13e8] [cursor=pointer]:
+          - /url: /FoundIt/report?type=LOST
+        - link "Dashboard" [ref=f13e9] [cursor=pointer]:
+          - /url: /FoundIt/dashboard
+        - link "Claims to review" [ref=f13e10] [cursor=pointer]:
+          - /url: /FoundIt/claims/review
+        - link "My claims" [ref=f13e11] [cursor=pointer]:
+          - /url: /FoundIt/claims/mine
+      - generic [ref=f13e12]:
+        - link "Alerts 2" [ref=f13e13] [cursor=pointer]:
+          - /url: /FoundIt/notifications
+          - text: Alerts
+          - generic [ref=f13e14]: "2"
+        - generic [ref=f13e15]: Aarti Deshmukh
+        - button "Sign out" [ref=f13e17] [cursor=pointer]
+  - main [ref=f13e18]:
+    - generic [ref=f13e19]: Signed in as Aarti Deshmukh.
+    - generic [ref=f13e21]:
+      - generic [ref=f13e22]:
+        - heading "Your board" [level=1] [ref=f13e23]
+        - paragraph [ref=f13e24]: "Everything here belongs to your account: your reports, your claims, and the claims waiting on you."
+      - generic [ref=f13e25]:
+        - link "Report lost" [ref=f13e26] [cursor=pointer]:
+          - /url: /FoundIt/report?type=LOST
+        - link "Report found" [ref=f13e27] [cursor=pointer]:
+          - /url: /FoundIt/report?type=FOUND
+    - generic [ref=f13e28]:
+      - generic [ref=f13e30]:
+        - generic [ref=f13e31]: Lost reports
+        - generic [ref=f13e32]: "1"
+      - generic [ref=f13e34]:
+        - generic [ref=f13e35]: Found reports
+        - generic [ref=f13e36]: "1"
+      - generic [ref=f13e38]:
+        - generic [ref=f13e39]: Your claims
+        - generic [ref=f13e40]: "0"
+      - generic [ref=f13e42]:
+        - generic [ref=f13e43]: Waiting on you
+        - generic [ref=f13e44]: "0"
+        - link "Review inbox" [ref=f13e46] [cursor=pointer]:
+          - /url: /FoundIt/claims/review
+    - generic [ref=f13e47]:
+      - generic [ref=f13e48]:
+        - heading "Possible matches for your reports" [level=2] [ref=f13e49]
+        - generic [ref=f13e50]: Recomputed whenever a report is filed or edited
+      - generic [ref=f13e51]:
+        - generic [ref=f13e53]:
+          - generic [ref=f13e54]:
+            - generic [ref=f13e55]:
+              - generic [ref=f13e56]: Someone lost this
+              - heading [level=3] [ref=f13e57]:
+                - link "Hostel room key with red tag" [ref=f13e58] [cursor=pointer]:
+                  - /url: /FoundIt/items/view?id=5
+              - paragraph [ref=f13e59]: against your Keys with red tag near ground gate
+            - generic [ref=f13e60]:
+              - generic [ref=f13e61]: 92%
+              - generic [ref=f13e62]: Strong
+          - list [ref=f13e65]:
+            - listitem [ref=f13e66]: "Same category: Keys"
+            - listitem [ref=f13e67]: "Description words in common: ground, sport, gate"
+            - listitem [ref=f13e68]: Both reported as red
+            - listitem [ref=f13e69]: "Nearby places: Sports Ground and Sports Ground Gate"
+            - listitem [ref=f13e70]: Dates are one day apart
+          - link "Open report" [ref=f13e72] [cursor=pointer]:
+            - /url: /FoundIt/items/view?id=5
+        - generic [ref=f13e74]:
+          - generic [ref=f13e75]:
+            - generic [ref=f13e76]:
+              - generic [ref=f13e77]: Someone found this
+              - heading [level=3] [ref=f13e78]:
+                - link "Leather wallet found near canteen" [ref=f13e79] [cursor=pointer]:
+                  - /url: /FoundIt/items/view?id=2
+              - paragraph [ref=f13e80]: against your Brown leather wallet
+            - generic [ref=f13e81]:
+              - generic [ref=f13e82]: 76%
+              - generic [ref=f13e83]: Strong
+          - list [ref=f13e86]:
+            - listitem [ref=f13e87]: "Same category: Wallets & Purses"
+            - listitem [ref=f13e88]: "Description words in common: leather, canteen, wallet"
+            - listitem [ref=f13e89]: Both reported as brown
+            - listitem [ref=f13e90]: Dates are one day apart
+          - generic [ref=f13e91]:
+            - link "Open report" [ref=f13e92] [cursor=pointer]:
+              - /url: /FoundIt/items/view?id=2
+            - link "Claim it" [ref=f13e93] [cursor=pointer]:
+              - /url: /FoundIt/claims/new?item=2
+    - generic [ref=f13e94]:
+      - generic [ref=f13e96]:
+        - generic [ref=f13e97]:
+          - heading "Your lost reports" [level=2] [ref=f13e98]
+          - link "Add one →" [ref=f13e99] [cursor=pointer]:
+            - /url: /FoundIt/report?type=LOST
+        - table [ref=f13e101]:
+          - rowgroup [ref=f13e102]:
+            - row [ref=f13e103]:
+              - columnheader "Item" [ref=f13e104]
+              - columnheader "Date" [ref=f13e105]
+              - columnheader "Status" [ref=f13e106]
+          - rowgroup [ref=f13e107]:
+            - row [ref=f13e108]:
+              - cell [ref=f13e109]:
+                - link "Brown leather wallet" [ref=f13e110] [cursor=pointer]:
+                  - /url: /FoundIt/items/view?id=1
+              - cell "12 Oct 2026" [ref=f13e111]
+              - cell "open" [ref=f13e112]
+      - generic [ref=f13e115]:
+        - generic [ref=f13e116]:
+          - heading "Items you found" [level=2] [ref=f13e117]
+          - link "Add one →" [ref=f13e118] [cursor=pointer]:
+            - /url: /FoundIt/report?type=FOUND
+        - table [ref=f13e120]:
+          - rowgroup [ref=f13e121]:
+            - row [ref=f13e122]:
+              - columnheader "Item" [ref=f13e123]
+              - columnheader "Date" [ref=f13e124]
+              - columnheader "Claims" [ref=f13e125]
+              - columnheader "Status" [ref=f13e126]
+          - rowgroup [ref=f13e127]:
+            - row [ref=f13e128]:
+              - cell [ref=f13e129]:
+                - link "Keys with red tag near ground gate" [ref=f13e130] [cursor=pointer]:
+                  - /url: /FoundIt/items/view?id=6
+              - cell "15 Oct 2026" [ref=f13e131]
+              - cell "0" [ref=f13e132]
+              - cell "open" [ref=f13e133]
+    - generic [ref=f13e135]:
+      - generic [ref=f13e137]:
+        - generic [ref=f13e138]:
+          - heading "Your claims" [level=2] [ref=f13e139]
+          - link "All claims →" [ref=f13e140] [cursor=pointer]:
+            - /url: /FoundIt/claims/mine
+        - paragraph [ref=f13e141]:
+          - text: You have not claimed anything. Found items you can claim are on the
+          - link "found board" [ref=f13e142] [cursor=pointer]:
+            - /url: /FoundIt/browse?type=FOUND
+          - text: .
+      - generic [ref=f13e144]:
+        - generic [ref=f13e145]:
+          - heading "Recent alerts" [level=2] [ref=f13e146]
+          - link "All alerts →" [ref=f13e147] [cursor=pointer]:
+            - /url: /FoundIt/notifications
+        - generic [ref=f13e148]:
+          - generic [ref=f13e149]:
+            - link "Someone's lost report looks like the \"Keys with red tag near ground gate\" you found (92% match)." [ref=f13e151] [cursor=pointer]:
+              - /url: /FoundIt/items/view?id=6
+            - generic [ref=f13e152]: 7 days ago
+          - generic [ref=f13e153]:
+            - link "A found report looks like your lost \"Brown leather wallet\" (76% match)." [ref=f13e155] [cursor=pointer]:
+              - /url: /FoundIt/items/view?id=1
+            - generic [ref=f13e156]: 9 days ago
+  - contentinfo [ref=f13e157]:
+    - generic [ref=f13e158]: FoundIt · campus lost and found · Jakarta EE, Servlets, JSP, JDBC, MySQL
+    - generic [ref=f13e159]: A match is a hint, never proof of ownership.

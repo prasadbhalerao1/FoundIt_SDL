@@ -1,0 +1,72 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - link "FI FoundIt" [ref=f6e4] [cursor=pointer]:
+        - /url: /FoundIt/home
+        - generic [ref=f6e5]: FI
+        - text: FoundIt
+      - navigation [ref=f6e6]:
+        - link "Browse" [ref=f6e7] [cursor=pointer]:
+          - /url: /FoundIt/browse
+        - link "Report an item" [ref=f6e8] [cursor=pointer]:
+          - /url: /FoundIt/report?type=LOST
+        - link "Dashboard" [ref=f6e9] [cursor=pointer]:
+          - /url: /FoundIt/dashboard
+        - link "Claims to review" [ref=f6e10] [cursor=pointer]:
+          - /url: /FoundIt/claims/review
+        - link "My claims" [ref=f6e11] [cursor=pointer]:
+          - /url: /FoundIt/claims/mine
+      - generic [ref=f6e12]:
+        - link "Alerts 2" [ref=f6e13] [cursor=pointer]:
+          - /url: /FoundIt/notifications
+          - text: Alerts
+          - generic [ref=f6e14]: "2"
+        - generic [ref=f6e15]: Aarti Deshmukh
+        - button "Sign out" [ref=f6e17] [cursor=pointer]
+  - main [ref=f6e18]:
+    - generic [ref=f6e19]:
+      - heading "Claim “Leather wallet found near canteen”" [level=1] [ref=f6e20]
+      - paragraph [ref=f6e21]: The person holding the item reads this and decides. Write the detail that proves it is yours, not the detail that is already on the public page.
+    - generic [ref=f6e22]:
+      - generic [ref=f6e25]:
+        - generic [ref=f6e26]:
+          - generic [ref=f6e27]: How do you know it is yours?
+          - textbox "How do you know it is yours?" [ref=f6e28]:
+            - /placeholder: What is inside it, a mark or a scratch, a name written somewhere, where exactly you lost it.
+          - generic [ref=f6e29]: Private. Only you, the finder and the campus administrator can read this.
+        - generic [ref=f6e30]:
+          - generic [ref=f6e31]: How can the finder reach you?
+          - textbox "How can the finder reach you?" [ref=f6e32]:
+            - /placeholder: Phone number or email
+          - generic [ref=f6e33]: Shown only to the finder, after you submit.
+        - generic [ref=f6e34]:
+          - button "Submit claim" [ref=f6e35] [cursor=pointer]
+          - link "Back to the report" [ref=f6e36] [cursor=pointer]:
+            - /url: /FoundIt/items/view?id=2
+      - generic [ref=f6e37]:
+        - generic [ref=f6e38]:
+          - heading "What happens next" [level=2] [ref=f6e39]
+          - list [ref=f6e40]:
+            - listitem [ref=f6e41]: The finder is notified and reads your description.
+            - listitem [ref=f6e42]: They approve or reject it, and you get an alert either way.
+            - listitem [ref=f6e43]: If approved, you arrange the handover between yourselves.
+            - listitem [ref=f6e44]: The finder records the return, which closes the case.
+          - paragraph [ref=f6e45]: A match score never approves a claim on its own, and submitting a claim does not mark the item as returned.
+        - generic [ref=f6e46]:
+          - heading "The item" [level=2] [ref=f6e47]
+          - generic [ref=f6e48]:
+            - generic [ref=f6e49]:
+              - term [ref=f6e50]: Found at
+              - definition [ref=f6e51]: Main Canteen
+            - generic [ref=f6e52]:
+              - term [ref=f6e53]: Date found
+              - definition [ref=f6e54]: 13 Oct 2026
+            - generic [ref=f6e55]:
+              - term [ref=f6e56]: Category
+              - definition [ref=f6e57]: Wallets & Purses
+            - generic [ref=f6e58]:
+              - term [ref=f6e59]: Held by
+              - definition [ref=f6e60]: Rohan Kulkarni
+  - contentinfo [ref=f6e61]:
+    - generic [ref=f6e62]: FoundIt · campus lost and found · Jakarta EE, Servlets, JSP, JDBC, MySQL
+    - generic [ref=f6e63]: A match is a hint, never proof of ownership.

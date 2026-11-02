@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 900" width="100%" height="100%" style="background-color: #0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="entGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="relGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="attrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-size: 26px; fill: #f8fafc; font-weight: 700; letter-spacing: 0.5px; }
+    .subtitle { font-size: 14px; fill: #94a3b8; }
+    .legend-text { font-size: 13px; fill: #cbd5e1; }
+    .ent-rect { fill: url(#entGrad); stroke: #60a5fa; stroke-width: 2.5; filter: url(#shadow); rx: 6px; }
+    .ent-title { font-size: 16px; fill: #ffffff; font-weight: bold; text-anchor: middle; }
+    .ent-subtitle { font-size: 11px; fill: #93c5fd; text-anchor: middle; }
+    .rel-diamond { fill: url(#relGrad); stroke: #fbbf24; stroke-width: 2.5; filter: url(#shadow); }
+    .rel-title { font-size: 13px; fill: #ffffff; font-weight: 600; text-anchor: middle; }
+    .attr-ellipse { fill: url(#attrGrad); stroke: #64748b; stroke-width: 1.5; filter: url(#shadow); }
+    .attr-pk { fill: url(#attrGrad); stroke: #f59e0b; stroke-width: 2; filter: url(#shadow); }
+    .attr-text { font-size: 11px; fill: #e2e8f0; text-anchor: middle; }
+    .attr-pk-text { font-size: 11px; fill: #fbbf24; font-weight: bold; text-decoration: underline; text-anchor: middle; }
+    .conn-line { stroke: #64748b; stroke-width: 2; }
+    .card-text { font-size: 14px; fill: #38bdf8; font-weight: bold; }
+  </style>
+
+  <!-- Title & Legend -->
+  <text x="50" y="45" class="title">FoundIt - Database EER Diagram (Chen's Notation)</text>
+  <text x="50" y="68" class="subtitle">Campus Lost &amp; Found System • Verified Schema Relationships</text>
+
+  <!-- Legend Box -->
+  <g transform="translate(850, 20)">
+    <rect x="0" y="0" width="450" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="15" y="18" width="24" height="24" rx="3" fill="#1e40af" stroke="#60a5fa" stroke-width="2"/>
+    <text x="46" y="35" class="legend-text">Entity (Rectangle)</text>
+    <polygon points="175,30 188,18 201,30 188,42" fill="#d97706" stroke="#fbbf24" stroke-width="2"/>
+    <text x="210" y="35" class="legend-text">Relationship (Diamond)</text>
+    <ellipse cx="340" cy="30" rx="16" ry="10" fill="#334155" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="365" y="35" class="legend-text">Attribute (Oval)</text>
+  </g>
+
+  <!-- ================= CONNECTION LINES & CARDINALITIES ================= -->
+  <!-- 1. CATEGORIES <Classifies> ITEMS -->
+  <line x1="650" y1="180" x2="650" y2="240" class="conn-line"/>
+  <line x1="650" y1="280" x2="650" y2="340" class="conn-line"/>
+  <text x="660" y="210" class="card-text">1</text>
+  <text x="660" y="325" class="card-text">N</text>
+
+  <!-- 2. USERS <Reports> ITEMS -->
+  <line x1="330" y1="375" x2="415" y2="375" class="conn-line"/>
+  <line x1="475" y1="375" x2="570" y2="375" class="conn-line"/>
+  <text x="345" y="365" class="card-text">1</text>
+  <text x="545" y="365" class="card-text">N</text>
+
+  <!-- 3. ITEMS <Has Photos> ITEM_PHOTOS -->
+  <line x1="650" y1="410" x2="650" y2="475" class="conn-line"/>
+  <line x1="650" y1="515" x2="650" y2="580" class="conn-line"/>
+  <text x="660" y="445" class="card-text">1</text>
+  <text x="660" y="565" class="card-text">N</text>
+
+  <!-- 4. ITEMS <Claimed On> CLAIMS -->
+  <line x1="730" y1="375" x2="815" y2="375" class="conn-line"/>
+  <line x1="875" y1="375" x2="960" y2="375" class="conn-line"/>
+  <text x="745" y="365" class="card-text">1</text>
+  <text x="935" y="365" class="card-text">N</text>
+
+  <!-- 5. USERS <Files Claim> CLAIMS -->
+  <path d="M 250 340 L 250 240 L 1040 240 L 1040 340" fill="none" class="conn-line"/>
+  <text x="260" y="260" class="card-text">1</text>
+  <text x="1015" y="260" class="card-text">N</text>
+
+  <!-- 6. CLAIMS <Completes> ITEM_RETURNS -->
+  <line x1="1040" y1="410" x2="1040" y2="480" class="conn-line"/>
+  <line x1="1040" y1="520" x2="1040" y2="580" class="conn-line"/>
+  <text x="1050" y="445" class="card-text">1</text>
+  <text x="1050" y="565" class="card-text">1 (uq)</text>
+
+  <!-- 7. ITEMS <Returns> ITEM_RETURNS -->
+  <path d="M 730 395 L 820 480 L 960 595" fill="none" class="conn-line"/>
+  <text x="750" y="420" class="card-text">1</text>
+  <text x="935" y="580" class="card-text">1</text>
+
+  <!-- 8. USERS <Handled By> ITEM_RETURNS -->
+  <path d="M 250 410 L 250 720 L 1040 720 L 1040 650" fill="none" class="conn-line"/>
+  <text x="260" y="705" class="card-text">1</text>
+  <text x="1015" y="695" class="card-text">N</text>
+
+  <!-- 9. USERS <Receives> NOTIFICATIONS -->
+  <line x1="250" y1="410" x2="250" y2="480" class="conn-line"/>
+  <line x1="250" y1="520" x2="250" y2="580" class="conn-line"/>
+  <text x="260" y="445" class="card-text">1</text>
+  <text x="260" y="565" class="card-text">N</text>
+
+  <!-- 10. ITEMS <Matches> ITEMS (Self-matching pair M:N) -->
+  <path d="M 600 340 C 520 280, 520 200, 600 200 C 640 200, 670 230, 650 250" fill="none" class="conn-line" stroke-dasharray="4"/>
+  <text x="510" y="245" class="card-text" fill="#f59e0b">M : N</text>
+
+  <!-- ================= ENTITY RECTANGLES ================= -->
+  <!-- 1. CATEGORIES -->
+  <g transform="translate(570, 110)">
+    <rect x="0" y="0" width="160" height="70" class="ent-rect"/>
+    <text x="80" y="38" class="ent-title">CATEGORIES</text>
+    <text x="80" y="55" class="ent-subtitle">[Entity]</text>
+  </g>
+
+  <!-- 2. USERS -->
+  <g transform="translate(170, 340)">
+    <rect x="0" y="0" width="160" height="70" class="ent-rect"/>
+    <text x="80" y="38" class="ent-title">USERS</text>
+    <text x="80" y="55" class="ent-subtitle">[Entity]</text>
+  </g>
+
+  <!-- 3. ITEMS (Central) -->
+  <g transform="translate(570, 340)">
+    <rect x="0" y="0" width="160" height="70" class="ent-rect" stroke="#38bdf8" stroke-width="3"/>
+    <text x="80" y="38" class="ent-title">ITEMS</text>
+    <text x="80" y="55" class="ent-subtitle">[Lost &amp; Found Reports]</text>
+  </g>
+
+  <!-- 4. CLAIMS -->
+  <g transform="translate(960, 340)">
+    <rect x="0" y="0" width="160" height="70" class="ent-rect"/>
+    <text x="80" y="38" class="ent-title">CLAIMS</text>
+    <text x="80" y="55" class="ent-subtitle">[Entity]</text>
+  </g>
+
+  <!-- 5. NOTIFICATIONS -->
+  <g transform="translate(170, 580)">
+    <rect x="0" y="0" width="160" height="70" class="ent-rect"/>
+    <text x="80" y="38" class="ent-title">NOTIFICATIONS</text>
+    <text x="80" y="55" class="ent-subtitle">[Entity]</text>
+  </g>
+
+  <!-- 6. ITEM_PHOTOS -->
+  <g transform="translate(570, 580)">
+    <rect x="0" y="0" width="160" height="70" class="ent-rect"/>
+    <text x="80" y="38" class="ent-title">ITEM_PHOTOS</text>
+    <text x="80" y="55" class="ent-subtitle">[Weak Entity]</text>
+  </g>
+
+  <!-- 7. ITEM_RETURNS -->
+  <g transform="translate(960, 580)">
+    <rect x="0" y="0" width="160" height="70" class="ent-rect"/>
+    <text x="80" y="38" class="ent-title">ITEM_RETURNS</text>
+    <text x="80" y="55" class="ent-subtitle">[Handover Record]</text>
+  </g>
+
+  <!-- ================= RELATIONSHIP DIAMONDS ================= -->
+  <!-- Rel 1: CATEGORIES -> ITEMS (Classifies) -->
+  <g transform="translate(650, 260)">
+    <polygon points="0,-22 45,0 0,22 -45,0" class="rel-diamond"/>
+    <text x="0" y="5" class="rel-title">Classifies</text>
+  </g>
+
+  <!-- Rel 2: USERS -> ITEMS (Reports) -->
+  <g transform="translate(445, 375)">
+    <polygon points="0,-24 45,0 0,24 -45,0" class="rel-diamond"/>
+    <text x="0" y="5" class="rel-title">Reports</text>
+  </g>
+
+  <!-- Rel 3: ITEMS -> CLAIMS (Has Claims) -->
+  <g transform="translate(845, 375)">
+    <polygon points="0,-24 45,0 0,24 -45,0" class="rel-diamond"/>
+    <text x="0" y="5" class="rel-title">Has Claim</text>
+  </g>
+
+  <!-- Rel 4: USERS -> CLAIMS (Files) -->
+  <g transform="translate(645, 240)">
+    <polygon points="0,-20 40,0 0,20 -40,0" class="rel-diamond"/>
+    <text x="0" y="5" class="rel-title">Files</text>
+  </g>
+
+  <!-- Rel 5: ITEMS -> ITEM_PHOTOS (Contains) -->
+  <g transform="translate(650, 495)">
+    <polygon points="0,-22 45,0 0,22 -45,0" class="rel-diamond"/>
+    <text x="0" y="5" class="rel-title">Has Photos</text>
+  </g>
+
+  <!-- Rel 6: CLAIMS -> ITEM_RETURNS (Completes) -->
+  <g transform="translate(1040, 500)">
+    <polygon points="0,-22 45,0 0,22 -45,0" class="rel-diamond"/>
+    <text x="0" y="5" class="rel-title">Completes</text>
+  </g>
+
+  <!-- Rel 7: USERS -> NOTIFICATIONS (Receives) -->
+  <g transform="translate(250, 500)">
+    <polygon points="0,-22 45,0 0,22 -45,0" class="rel-diamond"/>
+    <text x="0" y="5" class="rel-title">Receives</text>
+  </g>
+
+  <!-- ================= KEY ATTRIBUTES (OVALS) ================= -->
+  <!-- Attributes for USERS -->
+  <line x1="170" y1="360" x2="110" y2="330" class="conn-line"/>
+  <ellipse cx="80" cy="320" rx="36" ry="16" class="attr-pk"/>
+  <text x="80" y="324" class="attr-pk-text">id (PK)</text>
+
+  <line x1="170" y1="380" x2="110" y2="380" class="conn-line"/>
+  <ellipse cx="75" cy="380" rx="35" ry="16" class="attr-ellipse"/>
+  <text x="75" y="384" class="attr-text">name</text>
+
+  <line x1="170" y1="400" x2="110" y2="430" class="conn-line"/>
+  <ellipse cx="75" cy="440" rx="38" ry="16" class="attr-ellipse"/>
+  <text x="75" y="444" class="attr-text">email (UK)</text>
+
+  <!-- Attributes for CATEGORIES -->
+  <line x1="600" y1="110" x2="570" y2="70" class="conn-line"/>
+  <ellipse cx="550" cy="55" rx="35" ry="16" class="attr-pk"/>
+  <text x="550" y="59" class="attr-pk-text">id (PK)</text>
+
+  <line x1="700" y1="110" x2="730" y2="70" class="conn-line"/>
+  <ellipse cx="750" cy="55" rx="38" ry="16" class="attr-ellipse"/>
+  <text x="750" y="59" class="attr-text">name (UK)</text>
+
+  <!-- Attributes for ITEMS -->
+  <line x1="600" y1="340" x2="560" y2="300" class="conn-line"/>
+  <ellipse cx="530" cy="285" rx="35" ry="16" class="attr-pk"/>
+  <text x="530" y="289" class="attr-pk-text">id (PK)</text>
+
+  <line x1="650" y1="340" x2="650" y2="310" class="conn-line"/>
+  <ellipse cx="650" cy="295" rx="30" ry="15" class="attr-ellipse"/>
+  <text x="650" y="299" class="attr-text">type</text>
+
+  <line x1="700" y1="340" x2="740" y2="300" class="conn-line"/>
+  <ellipse cx="765" cy="285" rx="32" ry="15" class="attr-ellipse"/>
+  <text x="765" y="289" class="attr-text">title</text>
+
+  <line x1="570" y1="395" x2="510" y2="420" class="conn-line"/>
+  <ellipse cx="465" cy="430" rx="46" ry="16" class="attr-ellipse"/>
+  <text x="465" y="434" class="attr-text">private_marks</text>
+
+  <line x1="730" y1="395" x2="780" y2="430" class="conn-line"/>
+  <ellipse cx="810" cy="445" rx="34" ry="15" class="attr-ellipse"/>
+  <text x="810" y="449" class="attr-text">status</text>
+
+  <!-- Attributes for CLAIMS -->
+  <line x1="1120" y1="360" x2="1180" y2="330" class="conn-line"/>
+  <ellipse cx="1215" cy="320" rx="35" ry="16" class="attr-pk"/>
+  <text x="1215" y="324" class="attr-pk-text">id (PK)</text>
+
+  <line x1="1120" y1="380" x2="1180" y2="380" class="conn-line"/>
+  <ellipse cx="1220" cy="380" rx="36" ry="16" class="attr-ellipse"/>
+  <text x="1220" y="384" class="attr-text">evidence</text>
+
+  <line x1="1120" y1="400" x2="1180" y2="430" class="conn-line"/>
+  <ellipse cx="1220" cy="440" rx="34" ry="16" class="attr-ellipse"/>
+  <text x="1220" y="444" class="attr-text">status</text>
+
+  <!-- Attributes for ITEM_RETURNS -->
+  <line x1="1120" y1="600" x2="1180" y2="580" class="conn-line"/>
+  <ellipse cx="1215" cy="570" rx="35" ry="16" class="attr-pk"/>
+  <text x="1215" y="574" class="attr-pk-text">id (PK)</text>
+
+  <line x1="1120" y1="630" x2="1180" y2="640" class="conn-line"/>
+  <ellipse cx="1225" cy="645" rx="45" ry="16" class="attr-ellipse"/>
+  <text x="1225" y="649" class="attr-text">returned_at</text>
+</svg>
